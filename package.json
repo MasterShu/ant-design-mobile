@@ -1,0 +1,62 @@
+{
+  "name": "antd-mobile-vue",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/antd-mobile-vue.ssr.js",
+  "module": "dist/antd-mobile-vue.esm.js",
+  "unpkg": "dist/antd-mobile-vue.min.js",
+  "files": [
+    "dist/*",
+    "src/**/*.vue",
+    "!src/lib-dev.vue"
+  ],
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "dev:build": "vue-cli-service build",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0"
+  },
+  "dependencies": {
+    "@vmcl/feedback": "^1.1.16",
+    "core-js": "^2.6.5",
+    "vtils": "^2.5.0",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0",
+    "vue-router": "^3.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@types/jest": "^23.1.4",
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-typescript": "^3.8.0",
+    "@vue/cli-plugin-unit-jest": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/test-utils": "1.0.0-beta.29",
+    "babel-core": "7.0.0-bridge.0",
+    "cross-env": "^5.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "minimist": "^1.2.0",
+    "rollup": "^1.12.1",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-buble": "^0.19.6",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.3",
+    "rollup-plugin-replace": "^2.2.0",
+    "rollup-plugin-terser": "^4.0.4",
+    "rollup-plugin-typescript2": "^0.21.2",
+    "rollup-plugin-vue": "^5.0.0",
+    "ts-jest": "^23.0.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
